@@ -1,0 +1,40 @@
+package br.edu.uninassau.World;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+@RestController
+public class ProjetoMafra02Application {
+	
+	@PostMapping("/contato")
+	public String criarContato() {
+		return "Contato criado com sucesso!";
+	}
+	
+	@GetMapping("/contato")
+	public String contato() {
+		return "contato criado com sucesso!";
+	}
+	
+	@PutMapping("/contato")
+	public String contato1() {
+		return "contato criado com sucesso!";
+				
+	}
+	
+	@DeleteMapping("/contato")
+	public String contato2() {
+		return "contato criado com sucesso!";
+		
+	}
+	public static void main(String[] args) {
+		SpringApplication.run(ProjetoMafra02Application.class, args);
+	}
+	
+}
